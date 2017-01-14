@@ -4,8 +4,9 @@ class Admin::JobsController < ApplicationController
   layout 'admin'
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where(:is_hidden => false).order("created_at DESC")
   end
+
 
   def new
     @job = Job.new
@@ -58,10 +59,10 @@ class Admin::JobsController < ApplicationController
   end
 
   def hide
-    @job = Job.find(parms[:id])
+    @job = Job.find(params[:id])
 
     @job.hide!
-    
+
     redirect_to :back
   end
 
