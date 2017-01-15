@@ -1,3 +1,24 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.pageone{
+  height: 100px;
+}
+
+#background{
+  background-image: url(https://ooo.0o0.ooo/2017/01/14/5879eed5e08d1.png);
+  height:600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photo h1{
+  position:absolute;
+  color: red;
+  text-align: center;
+  margin-left: 100%;
+  margin-top: 20%
+}
+.picture{
+  margin-top: inherit;
+}
+.two{
+  height: 1000px;
+}
