@@ -13,6 +13,9 @@ Rails.application.routes.draw do
         post :hide
       end
 
+      resources :welcome do
+    end
+
       resources :resumes
     end
   end

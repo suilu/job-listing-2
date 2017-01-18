@@ -1,24 +1,29 @@
-.pageone{
-  height: 100px;
+
+.container-welcome{
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFFFFF
+}
+.container{
+  color: #363636
+}
+.bg-1 {
+  margin-bottom: -20px;
+  margin-top:50px;
+  font-size: 20px;
+   height: 140px;
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding-top:70px;
+
 }
 
-#background{
-  background-image: url(https://ooo.0o0.ooo/2017/01/14/5879eed5e08d1.png);
-  height:600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
 
-.photo h1{
-  position:absolute;
-  color: red;
-  text-align: center;
-  margin-left: 100%;
-  margin-top: 20%
 }
-.picture{
-  margin-top: inherit;
-}
-.two{
-  height: 1000px;
+.person:hover {
+    border-color: #f1f1f1;
 }

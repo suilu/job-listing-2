@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<body>
     <head>
         <title>Job Listing </title>
         <%= csrf_meta_tags %>
@@ -8,15 +9,23 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
-    <body background="https://ww3.sinaimg.cn/large/006tKfTcjw1fbo33ko32fj30ri0ragn8.jpg";>
+    <body background-image="https://ooo.0o0.ooo/2017/01/17/587dc43092cef.png">
 
         <div class="container-fluid">
             <%= render "common/navbar" %>
-            <%= render "common/flashes" %>
             <%= yield %>
         </div>
 
         <%= render "common/footer" %>
 
     </body>
+  </body>
+  <style type="text/css">
+  body
+  {
+    background-image:url('https://ooo.0o0.ooo/2017/01/17/587dc43092cef.png');
+    background-attachment:fixed;
+    background-size: cover;
+  }
+  </style>
 </html>

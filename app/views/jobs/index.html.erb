@@ -1,53 +1,112 @@
+<html>
+<body>
+  <div class="container" >
+<link rel='stylesheet prefetch'>
+ <div style="background-color:rgba(255, 255, 255,1)";>
+
+                  <aside class="lg-side">
+                      <div class="inbox-head">
+                          <h3>C.c Job</h3>
+                          <form action="#" class="pull-right position">
+                              <div class="input-append">
+                                  <input type="text" class="sr-input" placeholder="Search Mail">
+                                  <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="inbox-body">
+                         <div class="mail-option">
+                             <div class="btn-group">
+                                 <i  class="glyphicon glyphicon-user"></i>
+
+                             </div>
+
+
+                               <div class="btn-group">
+                                 <%= link_to("Add a job", new_job_path, class: "btn btn-primary" ) %>
+                               </div>
+                             <div class="btn-group">
+                                 <a data-toggle="dropdown" href="#" class="btn mini blue">
+                                     Sequencing
+                                     <i class="fa fa-angle-down "></i>
+                                 </a>
+                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+                                     <li>
+                                       <%= link_to("According to salary limit", jobs_path(:order => "by_lower_bound")) %>
+                                     </li>
+                                     <li>
+                                         <%= link_to("According to salary cap", jobs_path(:order => "by_upper_bound")) %>
+
+                                     </li>
+                                      <li class="divider"></li>
+                                     <li>
+                                       <%= link_to("According to the time of publication", jobs_path ) %>
+
+                                     </li>
+                                 </ul>
+                             </div>
+
+
+                         </div>
+                          <table class="table table-inbox table-hover ">
+
+                                <thead>
+                                    <tr>
+                                        <td>
+                                            职缺</td>
+                                        <td>薪资下限</td>
+                                        <td>薪资上限</td>
+                                        <td>刊登时间</td>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <% @jobs.each do |job| %>
+                                    <tr>
+                                        <td>
+                                            <%= link_to(job.title, job_path(job)) %>
+                                        </td>
+                                        <td>
+                                            <%= job.wage_lower_bound %>
+                                        </td>
+                                        <td>
+                                            <%= job.wage_upper_bound %>
+                                        </td>
+                                        <td>
+                                            <%= job.created_at %>
+                                        </td>
+                                    </tr>
+                                    <% end %>
+                                </tbody>
+
+                            </table>
+
+                            <div class="text-center unstyled inbox-pagination">
+
+                                  <span><%= will_paginate @jobs %></span>
+
+                            </div>
+
+                      </div>
+                  </aside>
+              </div>
+</div>
+
+
+
+
 <div class="pull-right">
-  <%= link_to("Add a job", new_job_path, class: "btn btn-primary" ) %>
+  <a  href="/" class="btn btn-warning">
+      Go Back
+  </a>
 </div>
-<div class="dropdown clearfix pull-right">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      排序
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-        <li>
-          <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-        </li>
-        <li>
-            <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-
-        </li>
-        <li>
-          <%= link_to("按照发表时间排序", jobs_path ) %>
-
-        </li>
-    </ul>
-</div>
-<table class="table table-boldered">
-    <thead>
-        <tr>
-            <td>
-                职缺</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
-            <td>刊登时间</td>
-        </tr>
-
-    </thead>
-    <tbody>
-        <% @jobs.each do |job| %>
-        <tr>
-            <td>
-                <%= link_to(job.title, job_path(job)) %>
-            </td>
-            <td>
-                <%= job.wage_lower_bound %>
-            </td>
-            <td>
-                <%= job.wage_upper_bound %>
-            </td>
-            <td>
-                <%= job.created_at %>
-            </td>
-        </tr>
-        <% end %>
-    </tbody>
-
-</table>
+</body>
+<style type="text/css">
+body
+{
+  background-image:url('https://ooo.0o0.ooo/2017/01/17/587dc43092cef.png');
+  background-attachment:fixed;
+  background-size: cover;
+}
+</style>
+</html>

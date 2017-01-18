@@ -4,7 +4,7 @@ class Admin::JobsController < ApplicationController
   layout 'admin'
 
   def index
-    @jobs = Job.where(:is_hidden => false).order("created_at DESC")
+    @jobs = Job.order("created_at DESC")
   end
 
 
