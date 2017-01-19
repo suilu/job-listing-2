@@ -1,4 +1,7 @@
-<h1> Edit a job </h1>
+<html>
+<body>
+  <div class="adminedit">
+  <h1> Edit a job </h1>
 
 <%= simple_form_for [:admin, @job ] do |f| %>
 <hr>
@@ -9,5 +12,16 @@
   <%= f.input :contact_email %>
   <%= f.input :is_hidden %>
 
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", :class => "btn btn-warning"%>
 <% end %>
+</div>
+</body>
+<style>
+.adminedit{
+  height: 550px;
+}
+body{
+  background-image:url('https://ooo.0o0.ooo/2017/01/17/587dc43092cef.png');
+}
+</style>
+</html>

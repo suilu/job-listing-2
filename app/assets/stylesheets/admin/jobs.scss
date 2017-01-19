@@ -1,6 +1,9 @@
 .bg-2{
   opacity: 20px;
 }
+.container{
+  height: 1000px;
+}
 .mail-box {
     margin-left: 100px;
     border-collapse: collapse;
@@ -8,7 +11,6 @@
     display: table;
     table-layout: fixed;
     width: 90%;
-
 }
 .mail-box aside {
     display: table-cell;
